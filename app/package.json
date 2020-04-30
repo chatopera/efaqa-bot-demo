@@ -1,0 +1,27 @@
+{
+  "name": "efaqa-bot-demo",
+  "version": "1.0.0",
+  "description": "心理问答机器人示例程序",
+  "main": "demo.js",
+  "scripts": {
+    "start": "DEBUG=demo* node demo.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chatopera/efaqa-bot-demo.git"
+  },
+  "keywords": [
+    "chatbot"
+  ],
+  "author": "Chatopera Inc. <info@chatopera.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chatopera/efaqa-bot-demo/issues"
+  },
+  "homepage": "https://github.com/chatopera/efaqa-bot-demo#readme",
+  "dependencies": {
+    "@chatopera/sdk": "^1.10.0",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0"
+  }
+}
