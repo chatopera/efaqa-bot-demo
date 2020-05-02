@@ -77,7 +77,13 @@ Chatopera Test Client Listening on port 8668
 如果不想安装 Node.js 环境，进一步简化的运行方式是使用 docker，我们提供了 docker 镜像[chatopera/efaqa-bot-tc](https://hub.docker.com/r/chatopera/efaqa-bot-tc/)，使用如下命令立即启动。
 
 ```
-./admin/docker.sh
+docker run -it --rm -p 8668:8668 chatopera/efaqa-bot-tc:1.0.0
+```
+
+其中，前一个`8668`是服务访问端口，可以自定义，访问服务。
+
+```
+http://YOUR_IP:8668
 ```
 
 ## 其它链接
