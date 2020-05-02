@@ -9,11 +9,13 @@ env = env.toLowerCase();
 var all = {
   env: env,
   node: {
-    port: 8668
+    port: 8668,
   },
-  root: path.normalize(path.join(__dirname, "..", ".."))
+  root: path.normalize(path.join(__dirname, "..", "..")),
 };
 
-var config = _.merge(all, require("./" + env + ".js") || {});
+try {
+  all = _.merge(all, require("./" + env + ".js") || {});
+} catch (e) {}
 
-module.exports = config;
+module.exports = all;
