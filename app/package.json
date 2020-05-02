@@ -2,16 +2,23 @@
   "name": "efaqa-bot-demo",
   "version": "1.0.0",
   "description": "心理问答机器人示例程序",
-  "main": "demo.js",
   "scripts": {
-    "start": "DEBUG=demo* node demo.js"
+    "test": "node_modules/ava/cli.js",
+    "flow": "DEBUG=demo* node demo.js",
+    "serve": "node app.js",
+    "dev:serve": "node_modules/nodemon/bin/nodemon.js --ignore logs --ignore test -e js,ss --exec 'node app.js'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chatopera/efaqa-bot-demo.git"
   },
   "keywords": [
-    "chatbot"
+    "chatopera",
+    "chatbot",
+    "nodejs",
+    "javascript",
+    "psychologic",
+    "心理咨询"
   ],
   "author": "Chatopera Inc. <info@chatopera.com>",
   "license": "MIT",
@@ -22,6 +29,21 @@
   "dependencies": {
     "@chatopera/sdk": "^1.10.0",
     "debug": "^4.1.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "figlet": "^1.2.0",
+    "koa": "^2.1.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.1.1",
+    "koa-static": "^3.0.0",
+    "lodash": "^4.17.4",
+    "socket.io": "~2.0.1",
+    "superagent": "^3.5.2"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": ">=10.16.0"
   }
 }

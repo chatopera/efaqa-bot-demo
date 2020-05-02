@@ -1,0 +1,83 @@
+body, html {
+  height: 100%;
+}
+
+#container {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+}
+
+.chat-box {
+  height: 100%;
+  background-color: #fff;
+}
+
+.chat-header {
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #59ADEB;
+}
+
+.chat-messages {
+  overflow: auto;
+  height: 100%;
+  padding: 0px;
+  background-color: #F0F7FF;
+}
+
+.chat-message {
+  min-height: 21px;
+  padding-left: 10px;
+  margin: 3px;
+  font-family: consolas;
+}
+
+.message-author,
+.message-time {
+  font-size: 15px;
+  color: #666;
+  float: left;
+  margin-right: 6px;
+}
+
+.message-content {
+  font-size: 15px;
+  color: #000;
+  display: inline-block;
+}
+
+.users-list {
+  height: 100%;
+  background-color: #fff;
+  color: #eee;
+  padding: 0px;
+}
+
+.chat-user {
+  padding: 3px;
+  color: #111;
+}
+
+.chat-content-wrapper {
+  height: -webkit-calc(100% - 64px);
+  height: -moz-calc(100% - 64px);
+  height: -ms-calc(100% - 64px);
+  height: calc(100% - 64px);
+  margin: 0px;
+}
+
+.reg-form-container {
+  width: 50%;
+  margin: auto;
+  padding-top: 10%;
+}
+
+.chat-no-messages {
+  padding: 10px;
+  color: #000;
+  font-size: 20px;
+}

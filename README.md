@@ -8,7 +8,7 @@
 cd app
 npm install
 cp app/sample.env app/.env # edit .env, add client id and secret
-../admin/start.sh
+../admin/demo.sh
 open app/demo.js
 ```
 
@@ -40,9 +40,45 @@ open app/demo.js
 
 ## 使用文档
 
-[文档](https://docs.chatopera.com/products/psych-assistant/api.html)
+[https://docs.chatopera.com/products/psych-assistant/api.html](https://docs.chatopera.com/products/psych-assistant/api.html)
 
-文档中详细介绍，心理问答 API、账号创建、其它语言 SDK 和接口等内容。
+[使用文档](https://docs.chatopera.com/products/psych-assistant/api.html)，文档中详细介绍，心理问答 API、账号创建、其它语言 SDK 和接口等内容。
+
+## 对话示例程序
+
+为了方便用户体验和测试，同时提供一个 Web 应用，该 Web 应用源码也在`./app`内，该示例程序仅用于调试和体验。
+
+![](./assets/1.jpg)
+
+启动对话示例程序：
+
+```
+cd app
+npm i
+npm run serve
+```
+
+在控制台内看到如下日志，代表程序启动成功。
+
+```
+Chatopera Test Client Listening on port 8668
+```
+
+在浏览器内打开地址`http://localhost:8668/`，进入登录页面。
+
+![](./assets/2.jpg)
+
+填入`Client ID`和`Client Secret`开始使用。
+
+### 使用 docker 运行
+
+\*前提准备：安装 docker 服务。
+
+如果不想安装 Node.js 环境，进一步简化的运行方式是使用 docker，我们提供了 docker 镜像[chatopera/efaqa-bot-tc](https://hub.docker.com/r/chatopera/efaqa-bot-tc/)，使用如下命令立即启动。
+
+```
+./admin/docker.sh
+```
 
 ## 其它链接
 
