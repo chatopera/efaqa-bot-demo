@@ -94,6 +94,8 @@ http://YOUR_IP:8668
 
 [Chatopera Node.js SDK](https://www.npmjs.com/package/@chatopera/sdk)
 
+[Emotional First Aid Dataset, 心理咨询问答语料库](https://github.com/chatopera/efaqa-corpus-zh)
+
 ## 开源许可协议
 
 Copyright (2018-2020) <a href="https://www.chatopera.com/" target="_blank">北京华夏春松科技有限公司</a>
