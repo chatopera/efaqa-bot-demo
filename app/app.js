@@ -11,7 +11,7 @@ const figlet = require("figlet");
 const port = config.node.port || 8668;
 const bodyParser = require("koa-bodyparser");
 const router = require("./routes");
-const Bot = require("@chatopera/sdk");
+const { Chatbot } = require("@chatopera/sdk");
 
 app.use(serve(path.join(__dirname, "/public")));
 app.use(bodyParser());
@@ -47,7 +47,7 @@ io.on("connection", function (socket) {
     debug("socket.io", "client:server", data);
     let { host, clientId, clientSecret, username } = data.provider || {};
 
-    let bot = new Bot(clientId, clientSecret, host);
+    let bot = new Chatbot(clientId, clientSecret, host);
     let response = await bot.psychChat(
       "testclient",
       "efaqa-bot-demo",

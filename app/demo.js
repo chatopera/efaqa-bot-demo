@@ -19,14 +19,14 @@ const curdir = __dirname;
 const debug = require("debug")("demo");
 const path = require("path");
 const samples = require(path.join(curdir, "..", "assets", "sample.json"));
-const Chatbot = require("@chatopera/sdk");
+const { Chatbot } = require("@chatopera/sdk");
 
-const CLIENT_ID = process.env["CLIENT_ID"];
-const CLIENT_SECRET = process.env["CLIENT_SECRET"];
+const BOT_CLIENT_ID = process.env["BOT_CLIENT_ID"];
+const BOT_CLIENT_SECRET = process.env["BOT_CLIENT_SECRET"];
 const DEMO_FLOW_CHAT = process.env["DEMO_FLOW_CHAT"] || "on";
 const DEMO_FLOW_SEARCH = process.env["DEMO_FLOW_SEARCH"] || "on";
 
-const bot = new Chatbot(CLIENT_ID, CLIENT_SECRET);
+const bot = new Chatbot(BOT_CLIENT_ID, BOT_CLIENT_SECRET);
 
 /**
  * 调用查询接口
@@ -70,7 +70,7 @@ async function chat() {
 
 // main function
 async function main() {
-  debug("bot: client id %s, secret ********", CLIENT_ID);
+  debug("bot: client id %s, secret ********", BOT_CLIENT_ID);
   if (DEMO_FLOW_SEARCH.toLocaleLowerCase() == "on") await search();
   if (DEMO_FLOW_CHAT.toLocaleLowerCase() == "on") await chat();
 }

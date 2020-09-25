@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/chatopera/efaqa-bot-demo#readme",
   "dependencies": {
-    "@chatopera/sdk": "^1.10.0",
+    "@chatopera/sdk": "^2.5.3",
     "debug": "^4.1.1",
     "dotenv": "^8.2.0",
     "figlet": "^1.2.0",
